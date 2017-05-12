@@ -8,7 +8,7 @@ button.addEventListener('click', function() {
 	navigator.bluetooth.requestDevice({
 		filters: [{
 			//services: [0x1802]
-			name : "Unique Name"
+			name : "LG PH1(70)"
 		}]
 	}).then(device => {
 		console.log('Got device:', device.name);
