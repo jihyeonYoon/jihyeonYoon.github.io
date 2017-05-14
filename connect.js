@@ -3,6 +3,8 @@
 let ledCharacteristic = null;
 let poweredOn = false;
 
+var consoleText = document.getElementById("console");
+
 function onConnected() {
     document.querySelector('.connect-button').classList.add('hidden');
     document.querySelector('.color-buttons').classList.remove('hidden');
@@ -28,13 +30,15 @@ function connect() {
         })
         .then(device => {
             console.log('> Found ' + device.name);
+ 
+	    consoleText.innerHTML = "> Found " + device.name;
+
             console.log('Connecting to GATT Server...');
             device.addEventListener('gattserverdisconnected', onDisconnected)
             return device.gatt.connect(); //connectGATT() ??
         })
         .then(server => {
             console.log('Getting Service 0xffe5 - Light control...');
-	    document.write("Getting Service");
             return server.getPrimaryService(0xffe5);
         })
         .then(service => {
