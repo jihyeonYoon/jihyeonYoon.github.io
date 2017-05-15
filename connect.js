@@ -45,19 +45,19 @@ function connect() {
         })
         .then(service => {
             console.log('Getting Characteristic 0xffe9 - Light control...');
-	    consoleText.innerHTML = consoleText.innerTEXT + "\n Getting Characteristic";
+	    consoleText.innerHTML = consoleText.innerText + "\n Getting Characteristic";
 	    consoleText.innerHTML = "\n Getting Characteristic";
             return service.getCharacteristic(0xffe9);
         })
         .then(characteristic => {
             console.log('All ready!');
-	    consoleText.innerHTML = consoleText.innerText +"All ready! ";
+	    consoleText.innerHTML = consoleText.innerText +"\n All ready! ";
             ledCharacteristic = characteristic;
             onConnected();
         })
         .catch(error => {
             console.log('Argh! ' + error);
-	    consoleText.innerHTML = consoleText.innerText + 'Argh! ' + error;
+	    consoleText.innerHTML = consoleText.innerText + '\n Argh! ' + error;
         });
 }
 
