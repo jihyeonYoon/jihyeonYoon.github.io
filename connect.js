@@ -26,7 +26,7 @@ function connect() {
         {
 //            filters: [{ services: [0xffe5] }]
 		acceptAllDevices : true,
-		optionalServices: ['battery_service ']
+		optionalServices: ['795090c7-420d-4048-a24e-18e60180e23c']
 
         })
         .then(device => {
