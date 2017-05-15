@@ -32,7 +32,7 @@ function connect() {
         .then(device => {
             console.log('> Found ' + device.name);
  
-//	    consoleText.innerHTML = "> Found " + device.name;
+	    consoleText.innerHTML = "> Found " + device.name;
 
             console.log('Connecting to GATT Server...');
             device.addEventListener('gattserverdisconnected', onDisconnected)
@@ -40,7 +40,7 @@ function connect() {
         })
         .then(server => {
             console.log('Getting Service 0xffe5 - Light control...');
-	    consoleText.innerHTML = "\n Getting Service";
+	    consoleText.innerHTML = consoleText.innerText + "\n Getting Service";
             return server.getPrimaryService(0xffe5);
         })
         .then(service => {
@@ -57,7 +57,7 @@ function connect() {
         })
         .catch(error => {
             console.log('Argh! ' + error);
-	    consoleText.innerHTML = 'Argh! ' + error;
+	    consoleText.innerHTML = consoleText.innerText + 'Argh! ' + error;
         });
 }
 
