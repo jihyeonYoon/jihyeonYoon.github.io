@@ -25,7 +25,8 @@ function connect() {
     navigator.bluetooth.requestDevice(
         {
 //            filters: [{ services: [0xffe5] }]
-		acceptAllDevices : true
+		acceptAllDevices : true,
+		optionalServices: ['battery_service ']
 
         })
         .then(device => {
