@@ -44,7 +44,7 @@ function connect() {
         })
         .then(service => {
             console.log('Getting Characteristic 0xffe9 - Light control...');
-	    consoleText.innerHTML = consoleText.innerHTML + "\n Getting Characteristic";
+	    consoleText.innerHTML = consoleText.innerTEXT + "\n Getting Characteristic";
             return service.getCharacteristic(0xffe9);
         })
         .then(characteristic => {
