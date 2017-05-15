@@ -47,6 +47,7 @@ function connect() {
         })
         .then(characteristic => {
             console.log('All ready!');
+	    consoleText.innerHTML = consoleText.innerText +"All ready! ";
             ledCharacteristic = characteristic;
             onConnected();
         })
