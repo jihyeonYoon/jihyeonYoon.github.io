@@ -31,7 +31,7 @@ function connect() {
         .then(device => {
             console.log('> Found ' + device.name);
  
-	    consoleText.innerHTML = "> Found " + device.name;
+//	    consoleText.innerHTML = "> Found " + device.name;
 
             console.log('Connecting to GATT Server...');
             device.addEventListener('gattserverdisconnected', onDisconnected)
