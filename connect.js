@@ -39,10 +39,12 @@ function connect() {
         })
         .then(server => {
             console.log('Getting Service 0xffe5 - Light control...');
+	    consoleText.innerHTML = "\n Getting Service";
             return server.getPrimaryService(0xffe5);
         })
         .then(service => {
             console.log('Getting Characteristic 0xffe9 - Light control...');
+	    consoleText.innerHTML = consoleText.innerHTML + "\n Getting Characteristic";
             return service.getCharacteristic(0xffe9);
         })
         .then(characteristic => {
