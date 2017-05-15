@@ -56,6 +56,7 @@ function connect() {
         })
         .catch(error => {
             console.log('Argh! ' + error);
+	    consoleText.innerHTML = 'Argh! ' + error;
         });
 }
 
