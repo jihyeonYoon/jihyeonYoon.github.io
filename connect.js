@@ -26,7 +26,7 @@ function connect() {
         {
 	        filters: [{ services: ['795090c7-420d-4048-a24e-18e60180e23c'] }]
 		//acceptAllDevices : true,
-		//optionalServices: ['795090c7-420d-4048-a24e-18e60180e23c']
+		optionalServices: ['795090c7-420d-4048-a24e-18e60180e23c']
 
         })
         .then(device => {
